@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petsland</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="navbar-container">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+    </div>
+    
+    <div class="cover-container">
+        <h1>Welcome to Petsland</h1>
+    </div>
+
+    <div class="middle-container">
+
+        <div class="form-container">
+            <br>
+            <h2>Register Your Pet</h2>
+            <br>
+            <form onsubmit="submitForm(event)">
+        
+                <div class="form-control">
+                    <label for="txtName">Name</label>
+                    <input type="text" id="txtName" required>
+                </div>
+
+                <div class="form-control">
+                    <label for="txtColor">Color</label>
+                    <input type="text" id="txtColor" required>
+                </div>
+            
+                <div class="form-control">
+                    <label for="txtAge">Age</label>
+                    <input type="number" id="txtAge"  min="0" max="17" required>
+                </div>
+            
+                <div class="form-control">
+                    <label for="txtGender">Gender</label>
+                    <input type="text" id="txtGender" required>
+                </div>
+            
+                <div class="form-control">
+                    <label for="txtBreed">Breed</label>
+                    <input type="text" id="txtBreed" required>
+                </div>
+
+                <div class="form-control">
+                    <label for="txtOwner">Owner's Name</label>
+                    <input type="text" id="txtOwner"required>
+                </div>
+            
+                <div class="form-control">
+                    <label for="txtPhone">Phone</label>
+                    <input type="phone" id="txtPhone" required>
+                </div>
+            
+                <div class="form-control">
+                    <label for="selService">Service</label>
+                    <select class="select-class" id="selService" required>
+                        <!-- <option value="default" disabled selected value> -- select a service -- </option> -->
+                        <option value="nails cut">Nails Cut</option>
+                        <option value="shower">Shower</option>
+                        <option value="grooming">Grooming</option>
+                    </select>
+                </div>
+
+                <div class="form-control" id="submit-cont">
+                    <input id="submit-button" type="submit" value="Register" required>
+                </div>
+            </form>
+            
+            
+            
+        </div>
+
+        <div class="table-container">
+            <br>
+            <h2>Your registered Pets</h2>
+            <br>
+            <div class="table-container-2" id="table-container-2">
+                <table id="petsTable">
+                    <tr>
+                      <th>Name</th>
+                      <th>Color</th>
+                      <th>Age</th>
+                      <th>Gender</th>
+                      <th>Breed</th>
+                      <th>Owner's Name</th>
+                      <th>Phone</th>
+                      <th>Service</th>
+                    </tr>
+
+                    <tr id="petsTDs">
+                      
+                    </tr>
+                  </table>
+            </div>
+            <br>
+            
+            <div class="search-container">
+                <form onsubmit="searchPet(event)">
+
+                    <div class="form-control-2" id="search-input-cont">
+                        <label for="txtSearch">Find your pet</label>
+                        <input type="text" id="txtSearch" required placeholder="Enter your pet's name">
+                    </div>
+                        
+                    <div class="form-control-2" id="search-button-cont">
+                        <input id="search-button" type="submit" value="Search">
+                    </div>
+                </form>
+            </div>
+
+            <br>
+
+            <div class="delete-container">
+                <form onsubmit="deletePet(event)">
+
+                    <div class="form-control-3" id="delete-input-cont">
+                        <label for="txtDelete">Unregister your pet</label>
+                        <input type="text" id="txtDelete" required placeholder="Enter your pet's name">
+                    </div>
+                        
+                    <div class="form-control-3" id="delete-button-cont">
+                        <input id="delete-button" type="submit" value="Delete">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    <script src="scripts/register.js"></script>
+</body>
+</html>
